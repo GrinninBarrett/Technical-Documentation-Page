@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Documentation</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link href="styles/style.css" rel="stylesheet">
+  </head>
+<nav id="navbar">
+  <header>HTML Intro Guide</header>
+  <ul>
+    <li><a class="nav-link" href="#Getting_Started_With_HTML">Getting Started With
+      HTML</a></li>
+    <li><a class="nav-link" href="#What_is_HTML?">What is HTML?</a></li>
+    <li><a class="nav-link" href="#Anatomy_of_an_HTML_Element">Anatomy of an
+     HTML Element</a></li>
+    <li><a class="nav-link" href="#Nesting_Elements">Nesting Elements</a></li>
+    <li><a class="nav-link" href="#Attributes">Attributes</a></li>
+    <li><a class="nav-link" href="#Boolean_Attributes">Boolean Attributes</a></li>
+    <li><a class="nav-link" href="#Anatomy_of_an_HTML_Document">Anatomy of an HTML
+      Document</a></li>
+    <li><a class="nav-link" href="#HTML_Comments">HTML Comments</a></li>
+    <li><a class="nav-link" href="#Summary">Summary</a></li>
+    <li><a class="nav-link" id="last-link" href="#References">References</a></li>
+  </ul>
+</nav>
+<main id="main-doc">
+  <section class="main-section" id="Getting_Started_With_HTML">
+    <header>Getting Started With HTML</header>
+    <article>
+      <p>In this article we cover the absolute basics of HTML. To get you
+        started, this article defines elements, attributes, and all the other
+        important terms you may have heard. It also explains where these fit
+        into HTML. You will learn how HTML elements are structured, how a
+        typical HTML page is structured, and other important basic language
+        features. Along the way, there will be an opportunity to play with HTML
+        too!</p>
+    </article>
+  </section>
+  <section class="main-section" id="What_is_HTML?">
+    <header>What is HTML?</header>
+    <article>
+      <p><a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML">HTML</a>
+        (Hypertext Markup Language) is not a programming language. It is
+        a markup language that tells web browsers how to structure the web pages
+         you visit. It can be as complicated or as simple as the web developer
+         wants it to be. HTML consists of a series of elements, which you use
+         to enclose, wrap, or mark up different parts of content to make it
+         appear or act in a certain way. The enclosing tags can make content
+         into a hyperlink to connect to another page, italicize words, and so
+         on.  For example, consider the following line of text:</p>
+      <code>My cat is very grumpy</code>
+      <p>If we wanted the text to stand by itself, we could specify that it is
+        a paragraph by enclosing it in a paragraph element:</p>
+      <code>&ltp&gtMy cat is very grumpy&#60p&#62</code>
+    </article>
+  </section>
+  <section class="main-section" id="Anatomy_of_an_HTML_Element">
+    <header>Anatomy of an HTML Element</header>
+    <article>
+      <p>Let's further explore our paragraph element from the
+        previous section:</p>
+      <img class="anatomy-diagram" src="images/code-example-1.png" alt="example of opening and
+      closing paragraph tags in html">
+      <p>The anatomy of our element is:</p>
+      <ul>
+        <li><strong>The opening tag:</strong> This consists of the name of the element (in this
+          example, p for paragraph), wrapped in opening and closing angle
+          brackets. This opening tag marks where the element begins or starts
+          to take effect. In this example, it precedes the start of the
+          paragraph text.</li>
+        <li><strong>The content:</strong> This is the content of the element.
+          In this example, it is the paragraph text.</li>
+        <li><strong>The closing tag:</strong> This is the same as the opening
+          tag, except that it includes a forward slash before the element name.
+           This marks where the element ends. Failing to include a closing tag
+           is a common beginner error that can produce peculiar results.</li>
+      </ul>
+      <p>The element is the opening tag, followed by content, followed by
+        the closing tag.</p>
+    </article>
+  </section>
+  <section class="main-section" id="Nesting_Elements">
+    <header>Nesting Elements</header>
+    <article>
+      <p>Elements can be placed within other elements. This is called nesting.
+        If we wanted to state that our cat is <strong>very</strong> grumpy, we
+        could wrap the word <i>very</i> in a strong
+        element, which means that the word is to have strong(er)
+        text formatting:</p>
+      <code>&ltp&gtMy cat is &ltstrong&gtvery&lt/strong&gt grumpy.&lt/p&gt</code>
+    </article>
+  </section>
+  <section class="main-section" id="Attributes">
+    <header>Attributes</header>
+    <article>
+      <p>Elements can also have attributes. Attributes look like this:</p>
+      <img class="code-example" src="images/code-example-3.png" alt="example of
+        attribute">
+      <p>Attributes contain extra information about the element that won't
+        appear in the content. In this example, the class attribute
+        is an identifying name used to target the element with style
+        information.</p>
+      <p>An attribute should have:</p>
+      <ul>
+        <li>A space between it and the element name. (For an element with more
+          than one attribute, the attributes should be separated by spaces
+          too.)</li>
+        <li>The attribute name, followed by an equal sign.</li>
+        <li>An attribute value, wrapped with opening and closing quote marks.</li>
+      </ul>
+    </article>
+  </section>
+  <section class="main-section" id="Boolean_Attributes">
+    <header>Boolean Attributes</header>
+    <article>
+      <p>Sometimes you will see attributes written without values. This is
+        entirely acceptable. These are called Boolean attributes. Boolean
+        attributes can only have one value, which is generally the same as
+        the attribute name. For example, consider the disabled
+        attribute, which you can assign to form input elements. (You use this
+        to <i>disable</i> the form input elements so the user can't make entries.
+        The disabled elements typically have a grayed-out appearance.)
+        For example:</p>
+      <code>&ltinput type="text" disabled="disabled"&gt</code>
+      <p>As shorthand, it is acceptable to write this as follows:</p>
+      <pre>
+        <code>&lt!-- using the disabled attribute prevents the end user from entering text into the input box --&gt
+    &ltinput type="text" disabled&gt
+
+    &lt!-- text input is allowed, as it doesn't contain the disabled attribute --&gt
+    &ltinput type="text"&gt</code>
+      </pre>
+    </article>
+  </section>
+  <section class="main-section" id="Anatomy_of_an_HTML_Document">
+    <header>Anatomy of an HTML Document</header>
+    <article>
+      <p>Individual HTML elements aren't very useful on their own. Next, let's
+        examine how individual elements combine to form an entire HTML page:</p>
+      <pre>
+        <code>&lt!DOCTYPE html&gt
+    &lthtml&gt
+      &lthead&gt
+        &ltmeta charset="utf-8"&gt
+        &lttitle&gtMy test page&lt/title&gt
+      &lt/head&gt
+      &ltbody&gt
+        &ltp&gtThis is my page&lt/p&gt
+      &lt/body&gt
+    &lt/html&gt</code>
+      </pre>
+      <p>Here we have:</p>
+      <ol>
+        <li><code class="inline">&lt!DOCTYPE html&gt</code>: The doctype. When HTML was young
+          (1991-1992), doctypes were meant to act as links to a set of rules
+          that the HTML page had to follow to be considered good HTML. Doctypes
+          used to look something like this:
+          <pre>
+            <code>&lt!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+              "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt</code>
+          </pre>
+          More recently, the doctype is a historical artifact that needs to be
+          included for everything else to work right. <code class="inline">&lt!DOCTYPE html&gt</code>
+          is the shortest string of characters that counts as a valid doctype.
+          That is all you need to know!</li>
+        <li><code class="inline">&lthtml&gt&lt/html&gt</code>: The <code class="inline">&lthtml&gt</code> element.
+          This element wraps all the content on the page. It is sometimes
+          known as the root element.</li>
+        <li><code class="inline">&lthead&gt&lt/head&gt</code>: The <code class="inline">&lthead&gt</code>
+          element. This element acts as a container for eveything you want to
+          include on the HTML page, <strong>that isn't the content</strong> the
+          page will show to viewers. This includes keywords and a page
+          description that would appear in search results, CSS to style content,
+          character set declarations, and more. You'll learn more about this in
+          the next article of the series.</li>
+        <li><code class="inline">&ltmeta charset="utf-8"&gt</code>: This element specifies the
+          character set for your document to UTF-8, which includes most
+          characters from the vast majority of human written languages. With
+          this setting, the page can now handle any textual content it might
+          contain. There is no reason not to set this, and it can help avoid
+          some problems later.</li>
+        <li><code class="inline">&lttitle&gt&lt/title&gt</code>: The <code class="inline">&lttitle&gt</code> element.
+          This sets the title of the page, which is the title that appears in the
+          browser tab the page is loaded in. The page title is also used to describe
+          the page when it is bookmarked.</li>
+        <li><code class="inline">&ltbody&gt&lt/body&gt</code>: The <code class="inline">&ltbody&gt</code> element.
+          This contains <i>all</i> the content that displays on the page, including
+          text, images, videos, games, playable audio tracks, or whatever else.</li>
+      <ol>
+    </article>
+  </section>
+  <section class="main-section" id="HTML_Comments">
+    <header>HTML Comments</header>
+    <article>
+      <p>HTML has a mechanism to write comments in the code. Browsers ignore
+        comments,  effectively making comments invisible to the user. The
+        purpose of comments is to allow you to include notes in the code to
+        explain your logic or coding. This is very useful if you return to a
+        code base after being away for long enough that you don't completely
+        remember it. Likewise, comments are invaluable as different people are
+        making changes and updates.</p>
+      <p>To write an HTML comment, wrap it in the special markers <code class="inline">&lt!--</code>
+        and <code class="inline">--&gt</code>. For example:</p>
+      <pre>
+        <code>&ltp&gtI'm not inside a comment&lt/p&gt
+
+&lt!-- &ltp&gtI am!&lt/p&gt --&gt</code>
+      </pre>
+      <p>As you can see below, only the first paragraph displays in the live output.</p>
+      <p class="output">I'm not inside a comment</p>
+    </article>
+  </section>
+  <section class="main-section" id="Summary">
+    <header>Summary</header>
+    <article>
+      <p>You made it to the end of the article! We hope you enjoyed your tour of
+        the basics of HTML.</p>
+      <p>At this point, you should understand what HTML looks like, and how it
+        works at a basic level. You should also be able to write a few elements
+        and attributes. The subsequent articles of this module go further on
+        some of the topics introduced here, as well as presenting other
+        concepts of the language.</p>
+    </article>
+  </section>
+  <section class="main-section" id="References">
+    <header>References</header>
+    <article>
+      <p>All information contained in this document was taken verbatim from
+        <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started">
+          Mozilla's Developer Documentation - Getting Started With HTML</a>.</p>
+    </article>
+  </section>
+</main>
+</html>
