@@ -39,10 +39,20 @@ body {
   cursor: pointer;
 }
 
+#nav-top {
+  text-decoration: none;
+  color: #242A44;
+  margin: 0;
+}
+
 .nav-link {
   text-decoration: none;
   color: #242A44;
   border-top: 2px solid #686B79;
+}
+
+.nav-link:hover {
+  background-color: #E0EAF6;
 }
 
 #last-link {
